@@ -1,0 +1,13 @@
+function dG_GL=get_dG_GL(Py,Px,T,Tc,Ex)
+
+
+    dG_GL_k_Py_alpha1=2.*alpha1.*Py;
+    dG_GL_k_Py_alpha11=4.*alpha11.*Py.^3;
+    dG_GL_k_Py_alpha12=2.*alpha12.*Py.*Px.^2;
+    dG_GL_k_Py_alpha111=6.*alpha111.*Py.^5;
+    dG_GL_k_Py_alpha112=alpha112.*(4.*Py.^3.*Px.^2+2.*Py.*Px.^4);
+    dG_GL_k_Py_alpha1111=alpha1111.*8.*Py.^7;
+    dG_GL_k_Py_alpha1112=alpha1112.*(6.*Py.^5.*Px.^2+2.*Py.*Px.^6);
+    dG_GL_k_Py_alpha1122=alpha1122.*4.*Py.^3.*Px.^4;
+    dG_GL=dG_GL_k_Py_alpha1+dG_GL_k_Py_alpha11+dG_GL_k_Py_alpha12+dG_GL_k_Py_alpha111+dG_GL_k_Py_alpha112+dG_GL_k_Py_alpha1111+dG_GL_k_Py_alpha1112+dG_GL_k_Py_alpha1122-Ex;
+end

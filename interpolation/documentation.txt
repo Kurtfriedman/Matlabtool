@@ -1,0 +1,8 @@
+These three functions are used for getting the cubic spline interpolation function and numerical integral.
+
+The function cubic_spline(x,y) will return parameters of spline function.
+
+The function getvalue_spline(M,x,y,t) will return the value of the spline funtion of whatever point inside the interpolation interval.
+
+The function intg_Newton(x,y) will return the integral value.
+
